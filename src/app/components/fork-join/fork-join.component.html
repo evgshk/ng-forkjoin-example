@@ -1,0 +1,15 @@
+<p>fork-join works!</p>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th *ngFor="let item of result[0].historical">{{item.date}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let label of result">
+            <td>{{label.symbol}}</td>
+            <td *ngFor="let item of label.historical">{{item.close}}</td>
+        </tr>
+    </tbody>
+</table>
